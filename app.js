@@ -1,1 +1,27 @@
-var _0x29b0=['currentPopup','964108IVErev','565534VPMkCa','401jlZVZB','29.05.2021','3678452zxMBev','411tKOrQD','4214RCWUnz','29.04.2021','innerText','paidScripts','1403jESbPX','Holzkopf\x20Crimelife','1432266VrzYgC','1NwxIXU','GVMP\x20Crimelife','name','freeScripts','2Vrdpyb','1305098DaMywM'];var _0x4ab004=_0x1b8b;(function(_0x133e41,_0x3adec3){var _0x59905e=_0x1b8b;while(!![]){try{var _0x23f789=-parseInt(_0x59905e(0x12b))*-parseInt(_0x59905e(0x137))+-parseInt(_0x59905e(0x126))*-parseInt(_0x59905e(0x127))+parseInt(_0x59905e(0x135))*parseInt(_0x59905e(0x132))+-parseInt(_0x59905e(0x136))*-parseInt(_0x59905e(0x12e))+-parseInt(_0x59905e(0x12d))+parseInt(_0x59905e(0x133))+-parseInt(_0x59905e(0x125));if(_0x23f789===_0x3adec3)break;else _0x133e41['push'](_0x133e41['shift']());}catch(_0x4bd16e){_0x133e41['push'](_0x133e41['shift']());}}}(_0x29b0,0xefe9f));function _0x1b8b(_0x145f7b,_0x111944){_0x145f7b=_0x145f7b-0x125;var _0x29b025=_0x29b0[_0x145f7b];return _0x29b025;}var Site=new Vue({'el':'#body','data':{'freeScripts':[{'name':_0x4ab004(0x12c),'desc':'','date':_0x4ab004(0x128),'price':0x0,'download':''},{'name':_0x4ab004(0x12f),'desc':'','date':_0x4ab004(0x138),'price':0x0,'download':''}],'paidScripts':[{'name':'Holzkopf\x20Crimelife','desc':'','date':'29.04.2021','price':0x14,'download':''},{'name':_0x4ab004(0x12f),'desc':'','date':_0x4ab004(0x138),'price':0x46,'download':''}],'currentScript':{},'currentPopup':-0x1},'methods':{'setPopup'(_0x5368b4){var _0x4a0b6c=_0x4ab004;this[_0x4a0b6c(0x134)]=_0x5368b4;},'setCurrent'(_0x5498ef,_0x2e58f3){var _0x1d22ad=_0x4ab004,_0x195bbe=_0x2e58f3?this[_0x1d22ad(0x131)]:this[_0x1d22ad(0x12a)];for(var _0x56b515=0x0;_0x56b515<_0x195bbe['length'];_0x56b515++){if(_0x195bbe[_0x56b515][_0x1d22ad(0x130)]==_0x5498ef['firstChild'][_0x1d22ad(0x129)])this['currentScript']=_0x195bbe[_0x56b515];}}}});
+var Site = new Vue({
+    el: "#body",
+    data: {
+        freeScripts: [
+            { name: "Holzkopf Crimelife", desc: "This package includes the latest Holzkopf Crimelife systems.", date: "29.04.2021", price: 0, download: ""}
+        ],
+        paidScripts: [
+            { name: "GVMP Gangwar", desc: "This package includes the latest GVMP designs, powerful systems and many unique features.", date: "29.05.2021", price: 70, download: ""}
+        ],
+        currentScript: {},
+        currentPopup: -1
+    },
+    methods: {
+        setPopup(i){
+            this.currentPopup = i;
+        },
+        setCurrent(e, f){
+            var A = f ? this.freeScripts : this.paidScripts;
+            for(var i = 0; i < A.length; i++){
+                if(A[i].name == e.firstChild.innerText) this.currentScript = A[i];
+            }
+        },
+        download(){
+            window.open(this.currentScript.download);
+        }
+    }
+});
